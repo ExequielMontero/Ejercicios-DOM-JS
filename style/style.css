@@ -13,8 +13,6 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
   font-family: system-ui, sans-serif;
 }
@@ -35,6 +33,7 @@ h5 {
 }
 
 .header {
+  z-index: 1000;
   background-color: yellow;
   height: 70px;
   width: 100%;
@@ -49,13 +48,37 @@ h5 {
 /*End encabezado header*/
 
 /*Reset secciones main*/
-.main {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  justify-content: space-between;
+.main-sec {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  border: 2px solid black;
+}
+.sec-h2 {
+  margin: 0;
+  text-align: center;
+  position: sticky;
+  top: 70px;
+  background-color: gold;
 }
 
+.sec-h2-1 {
+  z-index: 1;
+}
+.sec-h2-2 {
+  z-index: 2;
+}
+.sec-h2-3 {
+  z-index: 3;
+}
+.sec-h2-4 {
+  z-index: 4;
+}
+.sec-h2-5 {
+  z-index: 5;
+}
 /*End reset secciones main*/
 
 /*Icono hamburguesa*/
@@ -66,7 +89,75 @@ h5 {
   position: fixed; /* Posicionamiento fijo */
   bottom: 20px; /* Distancia desde la parte inferior */
   right: 20px; /* Distancia desde la derecha */
-  background: rgba(255, 217, 0, 0.63); /* Color de fondo (opcional) */
+  background: rgba(255, 217, 0, 0.959); /* Color de fondo (opcional) */
+  color: white; /* Color del ícono */
+  border: none;
+  padding: 10px;
+  border-radius: 50%; /* Forma circular */
+  cursor: pointer;
+  z-index: 500; /* Asegura que esté por encima de otros elementos */
+  width: 50px;
+  height: 50px;
+}
+
+.hamburger-btn-i {
+  color: black;
+  font-size: 25px;
+}
+/*End Icono hamburguesa*/
+
+/*Nav*/
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav a {
+  color: white;
+  font-size: 2.5rem;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+.nav li {
+  display: flex;
+  width: 15%;
+  height: 5%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav li:hover {
+  background-color: rgba(255, 255, 0, 0.568);
+  transition: all 0.4s ease-in-out;
+}
+
+.button-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 0, 0, 0.959); /* Color de fondo (opcional) */
   color: white; /* Color del ícono */
   border: none;
   padding: 10px;
@@ -75,11 +166,13 @@ h5 {
   z-index: 1000; /* Asegura que esté por encima de otros elementos */
   width: 50px;
   height: 50px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 
-.hamburger-btn-i {
+.button-nav-i {
   color: black;
   font-size: 25px;
-  z-index: 2000;
 }
-/*End Icono hamburguesa*/
+/*End nav*/

@@ -1,12 +1,43 @@
 const $nav = document.createElement("nav"),
+  $ul = document.createElement("ul"),
   links = [
-    { title: "seccion 1", src: "index.html/seccion1" },
-    { title: "seccion 2", src: "index.html/seccion2" },
-    { title: "seccion 3", src: "index.html/seccion3" },
-    { title: "seccion 4", src: "index.html/seccion4" },
-    { title: "seccion 5", src: "index.html/seccion5" },
-  ];
+    { title: "sección 1", src: "#seccion1" },
+    { title: "sección 2", src: "#seccion2" },
+    { title: "sección 3", src: "#seccion3" },
+    { title: "sección 4", src: "#seccion4" },
+    { title: "sección 5", src: "#seccion5" },
+  ],
+  $button = document.createElement("button");
 
-$nav.classList.add("");
+//Configuración del contenido nav
+$nav.classList.add("nav");
+$ul.innerHTML = links
+  .map(
+    (link, index) => `
+  <li>
+    <a id="nav-ul-li-${index + 1}" href="index.html${link.src}">${
+      link.title
+    }</a>
+  </li>
+`
+  )
+  .join("");
+//End configuración del contenido nav
 
-export const navLinks = function (e) {};
+//button dentro del nav
+const $i = `<i class="bi bi-x-circle-fill button-nav-i"></i>`;
+$button.innerHTML = $i;
+$button.classList.add("button-nav");
+$button.setAttribute("id", "button-nav");
+//End button dentro del nav
+
+const $header = document.querySelector(".header");
+//Agregando al DOM
+$nav.appendChild($ul);
+$nav.appendChild($button);
+$header.appendChild($nav);
+/* document.body.appendChild($nav); */
+//End agregando al DOM
+export const navLinks = () => {
+  $nav.style.display = $nav.style.display === "none" ? "flex" : "none";
+};
