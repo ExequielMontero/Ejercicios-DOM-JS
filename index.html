@@ -24,22 +24,45 @@
     <div class="espacioStickyHeader"></div>
     <main>
       <h2 class="sec-h2 sec-h2-1">sección</h2>
-      <section id="seccion1" class="main-sec"><br /><br /><br />1</section>
+      <section id="seccion1" class="main-sec">
+        <h3>Reloj y Alarma</h3>
+        <div class="reloj">
+          <button id="play-reloj">play reloj</button>
+          <button id="stop-reloj">stop reloj</button>
+          <button id="reset-reloj">reset reloj</button>
+          <label for="play-reloj stop-reloj" class="label1"></label>
+        </div>
+        <div class="Alarma">
+          <h3>Alarma</h3>
+          <label for="hora">Selecciona una hora:</label>
+          <input
+            type="time"
+            id="time"
+            name="hora"
+            min="00:00"
+            max="23:59"
+            required
+          />
+          <button id="activar-alarma">Activar alarma</button>
+          <button id="desactivar-alarma">Desactivar alarma</button>
+        </div>
+      </section>
       <h2 class="sec-h2 sec-h2-2">sección</h2>
-      <section id="seccion2" class="main-sec"><br /><br /><br />2</section>
+      <section id="seccion2" class="main-sec"><h3>seccion 2</h3></section>
       <h2 class="sec-h2 sec-h2-3">sección</h2>
-      <section id="seccion3" class="main-sec"><br /><br /><br />3</section>
+      <section id="seccion3" class="main-sec"><h3>seccion 3</h3></section>
       <h2 class="sec-h2 sec-h2-4">sección</h2>
-      <section id="seccion4" class="main-sec"><br /><br /><br />4</section>
+      <section id="seccion4" class="main-sec"><h3>seccion 4</h3></section>
       <h2 class="sec-h2 sec-h2-5">sección</h2>
-      <section id="seccion5" class="main-sec"><br /><br /><br />5</section>
+      <section id="seccion5" class="main-sec"><h3>seccion 5</h3></section>
     </main>
 
     <button class="hamburger-btn" id="hamburger">
       <i class="bi bi-list hamburger-btn-i"></i>
     </button>
 
-    <script src="js/EventosDOM.js" type="module"></script>
+    <script src="js/dom/barra_navegacion_dom.js"></script>
+    <script src="js/index_dom.js" type="module"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

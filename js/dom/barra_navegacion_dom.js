@@ -1,7 +1,7 @@
 const $nav = document.createElement("nav"),
   $ul = document.createElement("ul"),
   links = [
-    { title: "sección 1", src: "#seccion1" },
+    { title: "Reloj y Alarma", src: "#seccion1" },
     { title: "sección 2", src: "#seccion2" },
     { title: "sección 3", src: "#seccion3" },
     { title: "sección 4", src: "#seccion4" },
@@ -38,6 +38,3 @@ $nav.appendChild($button);
 $header.appendChild($nav);
 /* document.body.appendChild($nav); */
 //End agregando al DOM
-export const navLinks = () => {
-  $nav.style.display = $nav.style.display === "none" ? "flex" : "none";
-};
