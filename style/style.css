@@ -207,3 +207,18 @@ h3 {
   margin-top: 120px;
   font-weight: bold;
 }
+/* End Label seccion 1 reloj*/
+
+/*Seccion 2 table y ball-table*/
+.table {
+  background-color: black;
+  width: 80%;
+  height: 500px;
+}
+
+.ball-table {
+  width: 40px;
+  height: 40px;
+  background-color: brown;
+  border-radius: 50%;
+}
