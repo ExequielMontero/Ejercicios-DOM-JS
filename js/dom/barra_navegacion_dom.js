@@ -2,7 +2,7 @@ const $nav = document.createElement("nav"),
   $ul = document.createElement("ul"),
   links = [
     { title: "Reloj y Alarma", src: "#seccion1" },
-    { title: "sección 2", src: "#seccion2" },
+    { title: "Tabla bolla", src: "#seccion2" },
     { title: "sección 3", src: "#seccion3" },
     { title: "sección 4", src: "#seccion4" },
     { title: "sección 5", src: "#seccion5" },
