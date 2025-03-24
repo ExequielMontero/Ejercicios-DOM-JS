@@ -3,7 +3,7 @@ const $nav = document.createElement("nav"),
   links = [
     { title: "Reloj y Alarma", src: "#seccion1" },
     { title: "Tabla bolla", src: "#seccion2" },
-    { title: "sección 3", src: "#seccion3" },
+    { title: "Temporizador", src: "#seccion3" },
     { title: "sección 4", src: "#seccion4" },
     { title: "sección 5", src: "#seccion5" },
   ],
