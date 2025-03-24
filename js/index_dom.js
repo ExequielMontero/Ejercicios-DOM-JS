@@ -23,3 +23,21 @@ d.addEventListener("DOMContentLoaded", (e) => {
 d.addEventListener("keydown", (e) => {
   table(e, ".table", ".ball-table");
 }); /* End Tablero y manejo de la bola seccion 2"*/
+
+/*funcion temporizador inputs*/
+function validateNumber(input, maxValue) {
+  let value = parseInt(input.value, 10);
+
+  if (isNaN(value)) {
+    value = 0;
+  } else if (value > maxValue) {
+    value = maxValue;
+  } else if (value < 0) {
+    value = 0;
+  }
+
+  input.value = value;
+}
+window.validateNumber = validateNumber;
+
+/*end funcion temporizador inputs*/

@@ -37,6 +37,28 @@ h5 {
   align-items: center;
 }
 
+button {
+  background: #4caf50;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+button:disabled {
+  background: #6b8e72;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+button:not(:disabled):hover {
+  background: #45a049;
+}
+/*End Reset secciones*/
+
 /*Encabezado header*/
 .espacioStickyHeader {
   height: 70px;
@@ -222,3 +244,56 @@ h3 {
   background-color: brown;
   border-radius: 50%;
 }
+/*End Seccion 2 table y ball-table*/
+
+/*Seccion de temporizador*/
+.timer-container {
+  margin: 0 auto;
+  /* width: 50%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.inputs-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Fija un ancho si quieres que todos los "cuadros" tengan el mismo tamaño */
+  /* width: 80px; */
+}
+
+.input-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.input-group input {
+  width: 70px;
+  padding: 5px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#display {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+/*End Seccion de temporizador*/
