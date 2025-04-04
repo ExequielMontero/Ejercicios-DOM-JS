@@ -2,6 +2,7 @@ import { navLinks } from "./dom/boton_hamburguer.js";
 import { clockReloj, alarmaReloj } from "./dom/reloj_dom.js";
 import { table } from "./dom/tablero_and_ball.js";
 import { establecerMinimo } from "./dom/temporizador.js";
+import { darkMode } from "./dom/boton_darkmode.js";
 
 const d = document;
 d.addEventListener("DOMContentLoaded", (e) => {
@@ -23,10 +24,13 @@ d.addEventListener("DOMContentLoaded", (e) => {
   /*funcion temporizador inputs*/
   establecerMinimo();
   /*end funcion temporizador inputs*/
+
+  darkMode("#button-moon");
 });
 /*Tablero y manejo de la bola seccion 2"*/
 d.addEventListener("keydown", (e) => {
   table(e, ".table", ".ball-table");
 }); /* End Tablero y manejo de la bola seccion 2"*/
 
+//Funcion para ir reseteando el minimo del DataTimeLocal
 setInterval(establecerMinimo, 60000); // 60000 ms = 1 minuto

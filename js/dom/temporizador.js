@@ -1,9 +1,9 @@
 let intervalo;
 
 export function establecerMinimo() {
-  let ahora = new Date();
-  ahora.setMinutes(ahora.getMinutes() - ahora.getTimezoneOffset());
-  let minDatetime = ahora.toISOString().slice(0, 16);
+  let ahora = new Date().getUTCMinutes();
+  /*   ahora.setMinutes(ahora.getMinutes() - ahora.getTimezoneOffset()) */ let minDatetime =
+    ahora.toString().slice(0, 16);
   document.getElementById("datetime").min = minDatetime;
 }
 

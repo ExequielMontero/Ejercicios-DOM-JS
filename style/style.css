@@ -17,12 +17,24 @@ body {
   font-family: system-ui, sans-serif;
 }
 
+.body-darkmode {
+  background-color: black;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5 {
   text-wrap: balance;
+}
+
+.h3-darkmode {
+  color: white;
+}
+
+.label-darkmode {
+  color: white;
 }
 /*End reset document general*/
 
@@ -48,8 +60,25 @@ h5 {
   transition: 0.3s;
 }
 
+.button-darkmode {
+  background: #6cb2e0;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
 .button:disabled {
   background: #6b8e72;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.button-darkmode:disabled {
+  background: #6cb1e075;
   cursor: not-allowed;
   opacity: 0.7;
 }
@@ -238,6 +267,10 @@ h3 {
   height: 500px;
 }
 
+.table-darkmode {
+  background-color: white;
+}
+
 .ball-table {
   width: 40px;
   height: 40px;
@@ -271,8 +304,6 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Fija un ancho si quieres que todos los "cuadros" tengan el mismo tamaño */
-  /* width: 80px; */
 }
 
 .input-group label {
@@ -297,3 +328,21 @@ h3 {
 }
 
 /*End Seccion de temporizador*/
+
+/*Seccion boton darkmode*/
+.button-moon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  right: calc(20px + 3vw);
+  background: rgba(255, 217, 0, 0.959);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 500;
+  width: 50px;
+  height: 50px;
+}
